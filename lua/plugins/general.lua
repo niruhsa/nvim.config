@@ -1,9 +1,5 @@
 return {
 	{
-	"nvim-lua/plenary.nvim",
-	opts = {},
-	},
-	{
 		'nvim-treesitter/nvim-treesitter',
 		lazy = false,
 		build = ':TSUpdate'
@@ -11,7 +7,6 @@ return {
 	{
     	'nvim-telescope/telescope.nvim', version = '*',
     	dependencies = {
-        	'nvim-lua/plenary.nvim',
         	-- optional but recommended
         	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     	},
@@ -30,14 +25,31 @@ return {
         	"LazyGitFilter",
         	"LazyGitFilterCurrentFile",
     	},
-    	-- optional for floating window border decoration
-    	dependencies = {
-        	"nvim-lua/plenary.nvim",
-    	},
     	-- setting the keybinding for LazyGit with 'keys' is recommended in
     	-- order to load the plugin when the command is run for the first time
     	keys = {
         	{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
     	}
+	},	
+	{
+		"mason-org/mason.nvim",
+    	opts = {}
+	},
+	{
+		"saghen/blink.nvim",
+		opts = {
+			chartoggle = { enabled = true },
+			tree = { enabled = true },
+		},
+	},
+	{
+		"saghen/blink.cmp", version = "v1",
+	},
+	{
+   		"neovim/nvim-lspconfig",
+    	dependencies = {
+      		"mason.nvim",
+      		{ "williamboman/mason-lspconfig.nvim", config = function() end },
+		},
 	}
 }

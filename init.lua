@@ -37,30 +37,30 @@ vim.keymap.set('n', '<leader>gg', '<Cmd>LazyGit<CR>', { desc = 'LazyGit' })
 -- === Go ===
 
 -- https://github.com/crispgm/nvim-go
-vim.lsp.config("go", {
-	notify = true,
-	auto_format = false,
-	auto_lint = true,
-	linter = 'golangic-lint',
-	linter_flags = {},
-	lint_prompt_style = 'qf',
-	formatter = 'gofmt',
-	maintain_cursor_pos = true,
-	test_flags = {},
-	test_timeout = '30s',
-	test_env = {},
-	test_popup = true,
-	test_popup_auto_leave = false,
-	test_popup_width = 80,
-	test_popup_height = 10,
-	test_open_cmd = 'edit',
-	tags_name = 'json',
-	tags_options = {'json=omitempty'},
-    tags_transform = 'snakecase',
-    tags_flags = {'-skip-unexported'},
-    quick_type_flags = {'--just-types'},
-})
-vim.lsp.enable("go")
-
-vim.lsp.config("gopls", {})
-vim.lsp.enable("gopls")
+-- vim.lsp.config("go", {
+-- 	notify = true,
+-- 	auto_format = false,
+-- 	auto_lint = true,
+-- 	linter = 'golangic-lint',
+-- 	linter_flags = {},
+-- 	lint_prompt_style = 'qf',
+-- 	formatter = 'gofmt',
+-- 	maintain_cursor_pos = true,
+-- 	test_flags = {},
+-- 	test_timeout = '30s',
+-- 	test_env = {},
+-- 	test_popup = true,
+-- 	test_popup_auto_leave = false,
+-- 	test_popup_width = 80,
+-- 	test_popup_height = 10,
+-- 	test_open_cmd = 'edit',
+-- 	tags_name = 'json',
+-- 	tags_options = {'json=omitempty'},
+--     tags_transform = 'snakecase',
+--     tags_flags = {'-skip-unexported'},
+--     quick_type_flags = {'--just-types'},
+-- })
+-- vim.lsp.enable("go")
+--
+-- vim.lsp.config("gopls", {})
+-- vim.lsp.enable("gopls")
