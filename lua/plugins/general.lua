@@ -36,16 +36,6 @@ return {
     	opts = {}
 	},
 	{
-		"saghen/blink.nvim",
-		opts = {
-			chartoggle = { enabled = true },
-			tree = { enabled = true },
-		},
-	},
-	{
-		"saghen/blink.cmp", version = "v1",
-	},
-	{
    		"neovim/nvim-lspconfig",
     	dependencies = {
       		"mason.nvim",
